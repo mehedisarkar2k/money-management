@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Management</title>
+
+    <script type="module" crossorigin src="./assets/index.63382a48.js"></script>
+    <link rel="stylesheet" href="./assets/index.8802ccaf.css" />
+  </head>
+  <body>
+    <header class="py-4 px-8 text-center bg-indigo-500">
+      <h2 class="text-white text-5xl uppercase tracking-widest font-body">
+        <span class="text-yellow-600">money</span> management system
+      </h2>
+    </header>
+
+    <main>
+      <div class="lg:grid grid-cols-6 h-full">
+        <aside class="col-span-2 border-r-2 h-full">
+          <div class="px-8 mb-4">
+            <input
+              type="text"
+              id="search-Field"
+              class="my-4 lg:w-full input-field"
+              placeholder="Search your entry"
+            />
+          </div>
+
+          <div class="all-item">
+            <div
+              class="
+                flex
+                items-center
+                justify-between
+                text-indigo-700 text-2xl
+                border-b-2 border-indigo-700
+              "
+            >
+              <div class="source px-4">Source</div>
+              <div class="amount px-4">Amount</div>
+            </div>
+
+            <!-- entries here -->
+            <!-- <div class="list list-red">
+              <div class="title">House Rent</div>
+              <div class="amount ml-auto px-4">12000 BDT</div>
+              <div class="delete hover:text-red-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="list list-green">
+              <div class="title">Tuition Fees</div>
+              <div class="amount ml-auto px-4">12000 BDT</div>
+              <div class="delete hover:text-red-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </div>
+            </div> -->
+          </div>
+        </aside>
+
+        <div class="mt-12 col-span-4 text-center">
+          <div class="grid grid-cols-1">
+            <div class="display card-body">
+              <div class="income text-2xl text-white bg-green-500 card">
+                <h3>Income</h3>
+                <p>$<span id="total-income">00</span></p>
+              </div>
+              <div class="spent text-2xl text-white bg-red-500 card">
+                <h3>Spent</h3>
+                <p>$<span id="total-spent">00</span></p>
+              </div>
+              <div class="balance text-2xl text-white bg-yellow-500 card">
+                <h3>Balance</h3>
+                <p>$<span id="total-balance">00</span></p>
+              </div>
+            </div>
+
+            <div class="input card-body">
+              <div class="income-input card">
+                <div class="mb-4 flex items-center justify-center">
+                  <input
+                    class="w-2/5 rounded-r-none input-field rounded-md"
+                    type="text"
+                    id="income-source"
+                    placeholder="Source"
+                  />
+                  <input
+                    class="w-3/5 rounded-l-none input-field rounded-md"
+                    type="number"
+                    id="income-amount"
+                    placeholder="Income amount"
+                  />
+                </div>
+                <button
+                  class="
+                    btn
+                    bg-green-400
+                    hover:bg-green-300
+                    active:ring-2 active:bg-green-500
+                  "
+                  id="income-btn"
+                >
+                  Deposit
+                </button>
+              </div>
+              <div class="spent-input card">
+                <div class="mb-4 flex items-center justify-center">
+                  <input
+                    class="w-2/5 rounded-r-none input-field rounded-md"
+                    type="text"
+                    id="spent-source"
+                    placeholder="Source"
+                  />
+                  <input
+                    class="w-3/5 rounded-l-none input-field rounded-md"
+                    type="number"
+                    id="spent-amount"
+                    placeholder="Spent amount"
+                  />
+                </div>
+                <button class="btn bg-red-400 hover:bg-red-300" id="spent-btn">
+                  Spent
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
