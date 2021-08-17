@@ -155,20 +155,20 @@ spentBTN.addEventListener("click", (e) => {
         totalSpentValue,
         (a, b) => a + b
       );
+
+      // update list
+      // create list
+      const newList = creatListItem(input.source, input.amount);
+      newList.classList.add("list-red");
+      // append to list
+      document.querySelector(".all-item").appendChild(newList);
+      console.log(document.querySelector(".all-item"));
     } else {
       alert("You can't spend more than your balance");
     }
 
     totalSpent.innerText = totalSpentValue;
     totalBalance.innerText = totalBalanceValue;
-
-    // update list
-    // create list
-    const newList = creatListItem(input.source, input.amount);
-    newList.classList.add("list-red");
-    // append to list
-    document.querySelector(".all-item").appendChild(newList);
-    console.log(document.querySelector(".all-item"));
   } else {
     alert("You have to enter valid amount and source");
   }
